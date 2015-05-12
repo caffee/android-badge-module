@@ -28,12 +28,13 @@ import android.content.Context;
 import android.net.Uri;
 
 public class SamsungLauncher extends AbstractLauncher implements Launcher.SAMSUNG {
-    private static SamsungLauncher ourInstance = new SamsungLauncher();
+
+    private static SamsungLauncher instance = new SamsungLauncher();
 
     private SamsungLauncher() {}
 
     public static SamsungLauncher getInstance() {
-        return ourInstance;
+        return instance;
     }
 
     @Override
