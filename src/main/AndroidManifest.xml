@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.github.caffee.badge">
     <uses-sdk android:minSdkVersion="16" 
-              android:maxSdkVersion="22"
-              android:targetSdkVersion="22" />
+              android:maxSdkVersion="23"
+              android:targetSdkVersion="23" />
     <!-- samsung -->
     <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
     <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
