@@ -23,12 +23,11 @@
 
 package com.github.caffee.badge;
 
-import com.github.caffee.badge.launcher.AbstractLauncher;
-import com.github.caffee.badge.launcher.Launcher;
-
 import android.content.Context;
 
-public class BadgeBroadcastManager extends BaseManager implements Launcher {
+import com.github.caffee.badge.launcher.AbstractLauncher;
+
+public class BadgeBroadcastManager extends BaseManager {
     private Context context;
     private AbstractLauncher launcher;
 
@@ -39,16 +38,23 @@ public class BadgeBroadcastManager extends BaseManager implements Launcher {
     }
 
     public void notifyUpdate(final int badgeCount) {
-        if(launcher != null) {
+        notifyUpdate(badgeCount, true);
+    }
+
+    public void notifyUpdate(final int badgeCount, final boolean hWNotification) {
+        if (context != null && launcher != null) {
             int count = getSharedPreferencesBadgeCount() + badgeCount;
             setSharedPreferencesBadgeCount(count);
             launcher.notifyUpdate(context, count);
-            hWNotification(context);
+
+            if (hWNotification) {
+                hWNotification(context);
+            }
         }
     }
 
     public void notifyRemove() {
-        if(launcher != null) {
+        if (context != null && launcher != null) {
             if (getSharedPreferencesBadgeCount() > 0) {
                 setSharedPreferencesBadgeCount(0);
                 launcher.notifyRemove(context);
