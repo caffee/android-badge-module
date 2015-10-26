@@ -47,7 +47,7 @@ public class SamsungLauncher extends AbstractLauncher implements Launcher.SAMSUN
     public void notifyRemove(final Context context) {
         String whereClause = COLUMN_CLASS + "=?";
         String[] arg = {getComponentName(context).getClassName()};
-        context.getContentResolver().delete(Uri.parse(CONTENT_URI),whereClause, arg);
+        context.getContentResolver().delete(Uri.parse(CONTENT_URI), whereClause, arg);
     }
 
     protected ContentValues getContentValues(final Context context, final int badgeCount) {
@@ -55,6 +55,6 @@ public class SamsungLauncher extends AbstractLauncher implements Launcher.SAMSUN
         obj.put(COLUMN_PACKAGE, context.getPackageName());
         obj.put(COLUMN_CLASS, getComponentName(context).getClassName());
         obj.put(COLUMN_BADGE_COUNT, badgeCount);
-        return  obj;
+        return obj;
     }
 }

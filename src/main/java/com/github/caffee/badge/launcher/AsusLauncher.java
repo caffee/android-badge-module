@@ -41,12 +41,12 @@ public class AsusLauncher extends AbstractLauncher implements Launcher.ASUS {
         Intent intent = new Intent(INTENT_ACTION);
         intent.putExtra(BADGE_COUNT, badgeCount);
         intent.putExtra(BADGE_COUNT_PACKAGE_NAME, context.getPackageName());
-        intent.putExtra(BADGE_COUNT_CLASS_NAME,  getComponentName(context).getClassName());
+        intent.putExtra(BADGE_COUNT_CLASS_NAME, getComponentName(context).getClassName());
         context.sendBroadcast(intent);
     }
 
     @Override
     public void notifyRemove(final Context context) {
-        notifyUpdate (context, 0);
+        notifyUpdate(context, 0);
     }
 }

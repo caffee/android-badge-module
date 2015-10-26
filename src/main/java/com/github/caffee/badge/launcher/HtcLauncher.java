@@ -41,12 +41,12 @@ public class HtcLauncher extends AbstractLauncher implements Launcher.HTC {
         Intent intent = new Intent(INTENT_ACTION);
         intent.putExtra(BADGE_COUNT, badgeCount);
         intent.putExtra(BADGE_COUNT_COMPONENT, getComponentName(context).flattenToString());
-        intent.putExtra(BADGE_COUNT_DATA,  getComponentName(context).getClassName());
+        intent.putExtra(BADGE_COUNT_DATA, getComponentName(context).getClassName());
         context.sendBroadcast(intent);
     }
 
     @Override
     public void notifyRemove(final Context context) {
-        notifyUpdate (context, 0);
+        notifyUpdate(context, 0);
     }
 }

@@ -41,7 +41,7 @@ public class SonyEricssonLauncher extends AbstractLauncher implements Launcher.S
         Intent intent = new Intent(INTENT_ACTION);
         intent.putExtra(BADGE_COUNT, String.valueOf(badgeCount));
         intent.putExtra(BADGE_COUNT_PACKAGE_NAME, context.getPackageName());
-        intent.putExtra(BADGE_COUNT_CLASS_NAME,  getComponentName(context).getClassName());
+        intent.putExtra(BADGE_COUNT_CLASS_NAME, getComponentName(context).getClassName());
         intent.putExtra(BADGE_SHOW_MESSAGE, badgeCount > 0);
 
         context.sendBroadcast(intent);

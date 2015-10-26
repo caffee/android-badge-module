@@ -36,7 +36,7 @@ public interface Launcher {
     }
 
     public interface SONYERICSSON {
-        String [] LAUNCHER_NAME = {"com.sonyericsson.home"};
+        String[] LAUNCHER_NAME = {"com.sonyericsson.home"};
 
         String INTENT_ACTION = "com.sonyericsson.home.action.UPDATE_BADGE";
         String BADGE_COUNT = "com.sonyericsson.home.intent.extra.badge.MESSAGE";
