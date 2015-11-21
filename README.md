@@ -16,13 +16,38 @@ Feature
   * SONY Xperia Launcher
   * HTC Blink Launcher
 
+Build (AAR Format)
+------------------
+:exclamation: Configure **ANDROID_HOME** environment variable first before execute below command line.  
+
+**Gradle Command line**  
+```  
+gradlew assembleRelease  
+```  
+
+This will generate an AAR file in `build/outputs/aar` folder.  
+
+Import `android-badge-module-release.aar` file as a module into your project and update build.gradle file dependencies section.  
+
+**build.gradle**  
+
+```  
+dependencies {  
+    .....  
+    .....  
+    compile project(':android-badge-module-release')  
+}
+```  
+
 Usage
 -----
 ```java  
 
 BadgeBroadcastManager badgeManager = new BadgeBroadcastManager(context);  
 // create/update badge  
-badgeManager.notifyUpdate(1)  
+badgeManager.notifyUpdate(1);  
+// create/update badge without sounds and vibrate the device  
+badgeManager.notifyUpdate(1, false);  
 // remove badge  
 badgeManager.notifyRemove();  
 
