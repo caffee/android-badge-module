@@ -15,6 +15,7 @@ Feature
   * ASUS ZenUI Launcher
   * SONY Xperia Launcher
   * HTC Blink Launcher
+  * LENOVO Launcher
 
 Build (AAR Format)
 ------------------
