@@ -7,3 +7,4 @@ Release Notes
 `NEW` Support ASUS ZenUI Launcher  
 `NEW` Support SONY Xperia Launcher  
 `NEW` Support HTC BlinkFeed Launcher  
+`NEW` Support LENOVO Launcher  
