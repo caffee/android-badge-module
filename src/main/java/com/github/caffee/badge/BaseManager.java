@@ -36,6 +36,7 @@ import com.github.caffee.badge.launcher.AbstractLauncher;
 import com.github.caffee.badge.launcher.AsusLauncher;
 import com.github.caffee.badge.launcher.HtcLauncher;
 import com.github.caffee.badge.launcher.Launcher;
+import com.github.caffee.badge.launcher.LenovoLauncher;
 import com.github.caffee.badge.launcher.SamsungLauncher;
 import com.github.caffee.badge.launcher.SonyEricssonLauncher;
 
@@ -87,6 +88,10 @@ public class BaseManager {
         // samsung
         if (Arrays.asList(Launcher.SAMSUNG.LAUNCHER_NAME).contains(getLauncherName())) {
             return SamsungLauncher.getInstance();
+        }
+        // lenovo
+        if (Arrays.asList(Launcher.LENOVO.LAUNCHER_NAME).contains(getLauncherName())) {
+            return LenovoLauncher.getInstance();
         }
         return null;
     }

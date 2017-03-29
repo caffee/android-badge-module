@@ -64,4 +64,12 @@ public interface Launcher {
         String COLUMN_ICON = "icon";             // extra feature
         String COLUMN_EXTRA_DATA = "extraData";  // extra feature
     }
+
+    public interface LENOVO {
+        String[] LAUNCHER_NAME = {"com.lenovo.olauncher"};
+
+        String INTENT_ACTION = "com.android.launcher.action.UNREAD_CHANGED";
+        String BADGE_COUNT = "unread_number";
+        String COMPONENT_NAME = "component_name";
+    }
 }
